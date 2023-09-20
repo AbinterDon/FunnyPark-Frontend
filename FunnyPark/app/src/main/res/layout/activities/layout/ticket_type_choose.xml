@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--票券種類購買 radiobutton切換-->
+    <item android:drawable="@drawable/check_no"
+        android:state_checked="false" />
+    <item android:drawable="@drawable/check_on"
+        android:state_checked="true" />
+</selector>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.forget_pwd"
+    tools:layout_editor_absoluteY="25dp"
+    android:background="#ebebeb">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo_b"
+                android:layout_marginTop="50dp"
+                />
+
+            <!--Email-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginBottom="35dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/email_icon"
+                        android:paddingRight="5dp"
+                        />
+
+                    <EditText
+                        android:id="@+id/text_mail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="請輸入電子信箱"
+                        android:inputType="textEmailAddress"
+                        android:textColor="#002738"
+                        android:textColorHint="#4f4f4f"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/btn_submit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:background="#002738"
+                        android:paddingLeft="23dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="23dp"
+                        android:paddingBottom="5dp"
+                        android:text="發送"
+                        android:textColor="#fff"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--驗證碼-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginBottom="35dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/email_number_icon"
+                        android:layout_gravity="center"
+                        android:paddingRight="5dp"
+                        />
+
+                    <EditText
+                        android:id="@+id/text_verify"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="請輸入驗證碼"
+                        android:inputType="number"
+                        android:textColor="#002738"
+                        android:textColorHint="#4f4f4f"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/btn_enter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:background="#002738"
+                        android:paddingLeft="23dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="23dp"
+                        android:paddingBottom="5dp"
+                        android:text="驗證"
+                        android:textColor="#fff"
+                        android:textSize="16dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

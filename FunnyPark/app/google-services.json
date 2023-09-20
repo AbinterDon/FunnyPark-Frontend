@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "977057397734",
+    "firebase_url": "https://funnypark-4e678.firebaseio.com",
+    "project_id": "funnypark-4e678",
+    "storage_bucket": "funnypark-4e678.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977057397734:android:68fc83f75a95b203",
+        "android_client_info": {
+          "package_name": "com.example.administrator.funnypark"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "977057397734-lbdo9gsr4dblpj5ueqpmpt5284flft3t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc-cSFKI8BcBlIcD7rby1u7FMNn-jOWBE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "977057397734-lbdo9gsr4dblpj5ueqpmpt5284flft3t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

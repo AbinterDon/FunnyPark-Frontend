@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.administrator.funnypark">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 藍牙權限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Android6.0以上版本 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Game -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" /> <!-- Beacon -->
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" /> <!-- use permission on Android M -->
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".beacon_game.game.beacon_small_game_loading"></activity>
+        <activity
+            android:name=".LoadingPage"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login.Login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.SignUp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".index"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.mail_verification"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.forget_pwd"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.activities_information"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mall.platform_mall"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".subject_park.subject_park"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.change_pwd"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ticket.ticket_information"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.member_center"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.activities_page"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.activities_list"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.activities_initiate"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activities.activities_ticket_checkout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ticket.ticket_list"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.activities_initiate_success"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.activities_ticket_purchase_success"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.activities_ticket_payment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.member_information"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.member_friends_center"
+            android:screenOrientation="portrait" /> <!-- 以下調整掃描QRcode的方向 -->
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="fullSensor"
+            tools:replace="screenOrientation" />
+        <activity
+            android:name=".member.member_friend_info"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.member_friend_add"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".subject_park.subject_park_activities"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".subject_park.subject_park_discount"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mall.platform_shopping_cart"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mall.platform_product_information"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mall.platform_product_exchange"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mall.platform_product_exchange_list"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mall.platform_product_payment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mall.platform_product_successful_payment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.activities_managerment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".subject_park.subject_park_guide"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.activities_managerment_list"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".subject_park.subject_park_mobile_guide"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".subject_park.subject_park_map"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".subject_park.subject_park_aerial_guide"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".subject_park.subject_park_choose"
+            android:screenOrientation="portrait" /> <!-- Beacon -->
+        <activity
+            android:name=".beacon_game.Scan_data.scan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".beacon_game.Before_game.connect_watch"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".beacon_game.Before_game.game_room"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".beacon_game.Scan_data.bluetooth"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".beacon_game.Scan_data.person_dead"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".beacon_game.Scan_data.game_end"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".beacon_game.game.Game01"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".beacon_game.game.Game03"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".beacon_game.game.Game04"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".beacon_game.game.Game05"
+            android:screenOrientation="portrait" /> <!-- 網路安全性設定 Android 9.0 Okhttp設定 -->
+        <!-- 推播設定 -->
+        <!-- Set custom default icon. This is used when no icon is set for incoming notification messages.See README(https://goo.gl/l4GJaQ) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo_start_black" /> <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming notification message. See README(https://goo.gl/6BKBk7) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorWhite" />
+
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service> <!-- Beacon -->
+        <service
+            android:name="com.aprilbrother.aprilbrothersdk.services.ABeaconUartService"
+            android:exported="false" />
+        <service
+            android:name="com.aprilbrother.aprilbrothersdk.services.UartService"
+            android:exported="false" />
+        <service
+            android:name="com.aprilbrother.aprilbrothersdk.service.BeaconService"
+            android:exported="false" />
+
+        <activity android:name=".activities_managerment_id_scanning" />
+        <activity android:name=".ticket.ticket_transfer" />
+        <activity android:name=".member.about_system" />
+        <activity android:name=".mall.platform_product_exchange_info" />
+        <activity android:name=".new_attention" />
+        <activity android:name=".beacon_game.Before_game.scan_game_qr" />
+    </application>
+
+</manifest>

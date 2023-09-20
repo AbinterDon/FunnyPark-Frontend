@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+
+        android:id="@+id/tesd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <!--選擇日期-->
+        <EditText
+            android:id="@+id/activities_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:layout_weight="3"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:hint="選擇日期"
+            android:inputType="date"
+            android:textColorHint="#002738"
+            android:textSize="15dp" />
+        <!--選擇時段-->
+        <EditText
+            android:id="@+id/activities_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:hint="選擇時段"
+            android:inputType="time"
+            android:textColorHint="#002738"
+            android:textSize="15dp" />
+        <!--新增時間-->
+        <ImageView
+            android:id="@+id/activities_date_time_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_btn" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

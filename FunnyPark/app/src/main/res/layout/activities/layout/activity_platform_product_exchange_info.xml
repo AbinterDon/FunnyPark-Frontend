@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mall.platform_product_exchange_info">
+
+    <!--標題欄-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:background="#001F2C"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--購票頁面宣告-->
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="商品名稱"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="135dp"
+            tools:layout_editor_absoluteY="15dp" />
+        <!--返回上層-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icons_back"
+            android:layout_marginLeft="16dp"
+            android:onClick="finish_this_page"
+            />
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <!--整個大框框-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:paddingBottom="40dp">
+
+
+            <!--活動圖片-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/product_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:scaleType="centerCrop"
+                    android:src="#000" />
+            </LinearLayout>
+
+            <!--標題下內容-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="22.5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="22.5dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical">
+
+                <!--兌換編號-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="兌換編號："
+                    android:textColor="#002738"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/exchange_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:text="..."
+                    android:textColor="#002738"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <!--商家名稱 -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="商家名稱："
+                    android:textColor="#002738"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/merchant_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:text="..."
+                    android:textColor="#002738"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <!--園區名稱-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="園區名稱："
+                    android:textColor="#002738"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/park_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:text="..."
+                    android:textColor="#002738"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <!--園區地址-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="園區地址："
+                    android:textColor="#002738"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/park_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:text="..."
+                    android:textColor="#002738"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+
+                <!--商品兌換期限-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="商品兌換期限："
+                    android:textColor="#002738"
+                    android:textSize="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/exchange_limit_datetime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:text="..."
+                        android:textColor="#002738"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--QR code-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/exchange_qrcode"
+                    android:layout_width="134dp"
+                    android:layout_height="134dp"
+                    android:src="@drawable/qrcode_1" />
+
+                <TextView
+                    android:id="@+id/exchange_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="..."
+                    android:textColor="#002738"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

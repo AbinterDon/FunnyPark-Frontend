@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".member.member_information"
+    android:background="#002738">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:background="#001F2C"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--購票頁面宣告-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="會員管理"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            />
+        <!--返回上層-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icons_back"
+            android:layout_marginLeft="16dp"
+            android:onClick="finish_this_page"
+            />
+        <!--通知靠右且差距12dp-->
+        <!--查詢靠右且差距14dp-->
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <!--整個大框框-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--頭貼變更-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp">
+
+                <ImageView
+                    android:id="@+id/user_image"
+                    android:layout_width="137dp"
+                    android:layout_height="137dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/no_icon" />
+
+                <!--會員資料大框框-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="#fff"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="會員資料"
+                        android:textColor="#001f2c"
+                        android:textSize="20dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        />
+
+                    <!--會員編號-->
+
+                    <!--行動電話-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="15dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="本名"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:textColor="#002738"
+                            android:layout_marginBottom="7dp"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <!--本名-->
+                            <EditText
+                                android:id="@+id/user_original_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="120dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:hint="本名"
+                                android:inputType="text"
+                                android:textColor="#002738"
+                                android:textSize="14dp" />
+
+
+                            <!--驗證-->
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--暱稱-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="15dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="暱稱"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:textColor="#002738"
+                            android:layout_marginBottom="7dp"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                            <!--名子-->
+                            <EditText
+                                android:id="@+id/user_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="120dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:hint="暱稱"
+                                android:inputType="text"
+                                android:textColor="#002738"
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--手機-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="15dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="手機"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:textColor="#002738"
+                            android:layout_marginBottom="7dp"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                            <!--名子-->
+                            <EditText
+                                android:id="@+id/user_phone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="120dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:hint="手機"
+                                android:inputType="phone"
+                                android:textColor="#002738"
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--通訊地址-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="15dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="通訊地址"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:textColor="#002738"
+                            android:layout_marginBottom="7dp"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <!--信箱-->
+                            <EditText
+                                android:id="@+id/user_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:hint="通訊地址"
+                                android:inputType="textPostalAddress"
+                                android:textColor="#002738"
+                                android:textSize="14dp" />
+
+                            <!--重設-->
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <!--電子信箱-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="15dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="電子信箱"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:textColor="#002738"
+                            android:layout_marginBottom="7dp"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <!--信箱-->
+                            <EditText
+                                android:id="@+id/user_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:hint="電子信箱"
+                                android:gravity="center"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:inputType="textEmailAddress"
+                                android:textColor="#002738"
+                                android:textSize="14dp" />
+
+                            <!--重設-->
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--確認密碼-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:text="會員密碼"
+                            android:textColor="#002738"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <!--密碼-->
+                            <EditText
+                                android:id="@+id/user_pwd"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:hint="請輸入舊密碼"
+                                android:inputType="textPassword"
+                                android:textColor="#002738"
+                                android:textSize="14dp" />
+
+                            <!--變更密碼-->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="20dp"
+                                android:paddingRight="20dp"
+                                android:paddingBottom="3dp"
+                                android:paddingTop="3dp"
+                                android:text="變更密碼"
+                                android:gravity="center"
+                                android:textSize="14dp"
+                                android:textColor="#fff"
+                                android:onClick="check_old_password"
+                                android:background="#001f2c"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--出生年月日-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="15dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="出生年月日"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:textColor="#002738"
+                            android:layout_marginBottom="7dp"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                            <!--出生年月日-->
+                            <EditText
+                                android:id="@+id/user_birthday"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="120dp"
+                                android:layout_weight="1"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:gravity="center"
+                                android:hint="請選擇生日"
+                                android:inputType="text"
+                                android:textColor="#002738"
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--確定修改-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_marginBottom="26dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="確定修改"
+                            android:textSize="20dp"
+                            android:textColor="#fff"
+                            android:paddingTop="17dp"
+                            android:paddingBottom="17dp"
+                            android:paddingRight="86dp"
+                            android:paddingLeft="86dp"
+                            android:background="#001f2c"
+                            android:onClick="update_member_info"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

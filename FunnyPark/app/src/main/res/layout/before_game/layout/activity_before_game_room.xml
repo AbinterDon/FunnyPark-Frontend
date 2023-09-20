@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebebeb"
+    tools:context=".beacon_game.Before_game.game_room">
+
+    <!--標題欄-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:background="#001f2c"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--Logo-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="遊戲等待室"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="105dp"
+            tools:layout_editor_absoluteY="19dp" />
+        <!--返回上層-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icons_back"
+            android:layout_marginLeft="16dp"
+            android:onClick="before_connect_watch"
+            />
+    </android.support.v7.widget.Toolbar>
+
+    <!--
+     <ImageView
+            android:id="@+id/btn_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:onClick="go_scan"
+            android:src="@drawable/qr_list_icon"
+            tools:ignore="OnClick"
+            android:layout_marginRight="12dp"
+            tools:layout_editor_absoluteX="347dp"
+            tools:layout_editor_absoluteY="15dp" />
+     -->
+
+    <ScrollView
+        android:id="@+id/scrollView6"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/ready_game"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <!--活動大框架-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/activity_img"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginBottom="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/testimage3" />
+            <!--活動內頁-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:orientation="vertical">
+
+                <!--活動標題-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/activity_icon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="15dp"
+                        android:background="#2f2f2f" />
+
+                    <TextView
+                        android:id="@+id/activity_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="18dp"
+                        android:text="@string/activity_title_10"
+                        android:textColor="#002738"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <!--等候室-->
+                <!--Home1-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/game_room_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="#ebebeb" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--購票按鈕-->
+    <Button
+        android:id="@+id/ready_game"
+        android:layout_width="217dp"
+        android:layout_height="45dp"
+        android:background="#001f2c"
+        android:focusableInTouchMode="false"
+        android:gravity="center_horizontal|center_vertical"
+        android:onClick="start_bluetooth"
+        android:text="開起藍牙"
+        android:textColor="#fff"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/create_game_btn"
+        android:layout_width="197dp"
+        android:layout_height="45dp"
+        android:background="#001f2c"
+        android:enabled="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center_horizontal|center_vertical"
+        android:onClick="create_game"
+        android:text="進入遊戲"
+        android:textColor="#fff"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.activities_initiate">
+
+    <!--標題欄-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:background="#001F2C"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--購票頁面宣告-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="發起活動"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            />
+        <!--返回上層-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icons_back"
+            android:layout_marginLeft="16dp"
+            android:onClick="finish_this_page"
+            />
+        <!--通知靠右且差距12dp-->
+        <!--查詢靠右且差距14dp-->
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_initiate"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <!--新增活動大框架-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/activities_img"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginBottom="22dp"
+                android:background="@drawable/act_background" />
+
+            <!--主要大框框-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="9dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginBottom="21dp"
+                android:background="#E2E2E2"
+                android:orientation="vertical"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="20dp">
+
+                <!--活動名稱-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="18.5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="活動名稱"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="#001f2c"
+                        />
+                    <!--輸入區域-->
+                    <EditText
+                        android:id="@+id/activities_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="#002738"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <!--主辦單位-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="18.5dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="主辦單位"
+                            android:textColor="#002738"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <!--主辦單位-->
+                            <EditText
+                                android:id="@+id/activities_host"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="2"
+                                android:textColorHint="#002738"
+                                android:textSize="15dp" />
+                            <!--新增LOGO-->
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--協辦單位-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="18.5dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="協辦單位"
+                            android:textColor="#002738"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            >
+
+                            <!--協辦單位-->
+                            <EditText
+                                android:id="@+id/activities_co_organizer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="2"
+                                android:textColorHint="#002738"
+                                android:textSize="15dp" />
+                            <!--新增LOGO-->
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--活動種類-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="18.5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="活動種類"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="#001f2c"
+                        />
+                    <!--輸入區域-->
+
+                    <Spinner
+                        android:id="@+id/activities_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dialog" />
+                </LinearLayout>
+
+                <!--活動園區-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="18.5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="活動園區"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="#001f2c"
+                        />
+                    <!--輸入區域-->
+
+                    <Spinner
+                        android:id="@+id/activities_park_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dialog" />
+                </LinearLayout>
+
+                <!--活動時間-->
+                <LinearLayout
+                    android:id="@+id/activity_time_Linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:saveEnabled="false">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="活動時間"
+                        android:textColor="#002738"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <!--選擇日期-->
+                        <EditText
+                            android:id="@+id/activities_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp"
+                            android:layout_weight="3"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:gravity="center"
+                            android:hint="選擇日期"
+                            android:inputType="date"
+                            android:textColorHint="#002738"
+                            android:textSize="15dp" />
+                        <!--選擇時段-->
+                        <EditText
+                            android:id="@+id/activities_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:gravity="center"
+                            android:hint="選擇時段"
+                            android:inputType="time"
+                            android:textColorHint="#002738"
+                            android:textSize="15dp" />
+                        <!--新增時間-->
+                        <ImageView
+                            android:id="@+id/activities_date_time_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/add_btn" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/activities_time_Linear"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <!--輸入開始時間-->
+                        <EditText
+                            android:id="@+id/start_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp"
+                            android:layout_weight="3"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:gravity="center"
+                            android:hint="選擇開始時間"
+                            android:inputType="time"
+                            android:textColorHint="#002738"
+                            android:textSize="15dp"
+                            android:timePickerMode="spinner" />
+                        <!--輸入結束時間-->
+                        <EditText
+                            android:id="@+id/end_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:gravity="center"
+                            android:hint="選擇結束時間"
+                            android:inputType="time"
+                            android:textColorHint="#002738"
+                            android:textSize="15dp"
+                            android:timePickerMode="spinner" />
+                        <!--新增時間-->
+                        <ImageView
+                            android:id="@+id/activities_date_time_add2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/add_btn" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/activities_date_time_Linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="18.5dp"
+                    android:layout_marginBottom="18.5dp"
+                    android:saveEnabled="false"
+                    android:orientation="vertical">
+                </LinearLayout>
+
+                <!--活動標籤-->
+                <LinearLayout
+                    android:id="@+id/activity_hastag_Linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="18.5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="活動標籤"
+                        android:textColor="#002738"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <!--標籤輸入處-->
+                        <EditText
+                            android:id="@+id/activities_hastag"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:layout_weight="2"
+                            android:textColorHint="#002738"
+                            android:textSize="15dp" />
+                        <!--新增標籤-->
+                        <Button
+                            android:id="@+id/btn_activities_add_hastagt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="60dp"
+                            android:background="#002738"
+                            android:onClick="hastag_add"
+                            android:text="新增標籤"
+                            android:textColor="#fff"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+                    <!--標籤們-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="18dp"
+                        android:orientation="horizontal">
+                        <!--標籤1-->
+                        <TextView
+                            android:id="@+id/activities_hastag_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="7dp"
+                            android:background="#004564"
+                            android:paddingLeft="12dp"
+                            android:paddingTop="3dp"
+                            android:paddingRight="12dp"
+                            android:paddingBottom="3dp"
+                            android:text="無"
+
+                            android:textColor="#fff"
+                            android:textSize="14dp" />
+
+                        <!--標籤2-->
+                        <TextView
+                            android:id="@+id/activities_hastag_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="7dp"
+                            android:background="#004564"
+                            android:paddingLeft="12dp"
+                            android:paddingTop="3dp"
+                            android:paddingRight="12dp"
+                            android:paddingBottom="3dp"
+                            android:text="無"
+                            android:textColor="#fff"
+
+                            android:textSize="14dp" />
+
+                        <!--標籤3-->
+                        <TextView
+                            android:id="@+id/activities_hastag_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="7dp"
+                            android:background="#004564"
+                            android:paddingLeft="12dp"
+                            android:paddingTop="3dp"
+                            android:paddingRight="12dp"
+                            android:paddingBottom="3dp"
+                            android:text="無"
+                            android:textColor="#fff"
+
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!--活動或地點簡述-->
+                <LinearLayout
+                    android:id="@+id/activity_brief_Linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="18.5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="活動簡述"
+                        android:textColor="#001f2c"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                    <!--輸入區域-->
+                    <EditText
+                        android:id="@+id/activities_brief"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="9dp"
+                        android:background="#fff"
+                        android:gravity="top|left"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="4dp"
+                        android:scrollbars="vertical"
+                        android:textColor="#002738"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <!--活動票券-->
+                <LinearLayout
+                    android:id="@+id/activity_ticket_count_Linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="18.5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="活動票券"
+                        android:textColor="#002738"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <!--總票券張數-->
+                        <EditText
+                            android:id="@+id/activities_ticket_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp"
+                            android:layout_weight="3"
+                            android:gravity="center"
+                            android:hint="總票券張數"
+                            android:inputType="number"
+                            android:textColorHint="#002738"
+                            android:textSize="15dp" />
+
+                        <!--販售期限-->
+                        <EditText
+                            android:id="@+id/ticket_selling_period"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:gravity="center"
+                            android:hint="販售期限"
+                            android:inputType="date"
+                            android:textColorHint="#002738"
+                            android:textSize="15dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <!--保留票券張數-->
+                        <EditText
+                            android:id="@+id/activities_private_ticket_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp"
+                            android:layout_weight="3"
+                            android:gravity="center"
+                            android:hint="保留票券張數"
+                            android:inputType="number"
+                            android:textColorHint="#002738"
+                            android:textSize="15dp" />
+
+                        <!--開放票券張數-->
+                        <EditText
+                            android:id="@+id/activities_public_ticket_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:gravity="center"
+                            android:hint="開放票券張數"
+                            android:inputType="number"
+                            android:textColorHint="#002738"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--票券名稱與票價--><!--新增票券種類按鈕-->
+                <LinearLayout
+                    android:id="@+id/activity_ticket_Linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!--票券名稱與價格-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="票券名稱與票價"
+                        android:textColor="#002738"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <!--票券張數與期限-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <!--票卷名稱-->
+                        <!--販售價格-->
+                        <EditText
+                            android:id="@+id/ticket_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp"
+                            android:layout_weight="3"
+                            android:gravity="center"
+                            android:hint="票券名稱"
+                            android:textColorHint="#002738"
+                            android:textSize="15dp" />
+
+                        <EditText
+                            android:id="@+id/ticket_fare"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center"
+                            android:hint="販售價格"
+                            android:inputType="number"
+                            android:textColorHint="#002738"
+                            android:textSize="15dp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/add_btn"
+                        android:onClick="ticket_add" />
+                </LinearLayout>
+                <!-- 票券資訊新增的Linear -->
+                <LinearLayout
+                    android:id="@+id/ticket_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="vertical"></LinearLayout>
+
+                <!--活動發起人-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="18.5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="活動發起人"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="#001f2c"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/activities_initiate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center|left"
+                        android:text="User"
+                        android:textColor="#266E8E"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--新增活動按鈕-->
+    <Button
+        android:id="@+id/btn_initiate"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#004564"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="發起活動"
+        android:textColor="#fff"
+        android:textSize="18dp"
+        android:onClick="initiate_activity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <!--android:onClick="update_act"-->
+
+</android.support.constraint.ConstraintLayout>

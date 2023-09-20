@@ -1,0 +1,41 @@
+<resources>
+    <declare-styleable name="RadarView">
+        <attr name="mRingColor" format="color"/>
+        <attr name="mScanBgColor" format="color"/>
+        <attr name="mRingWidth" format="dimension"/>
+        <attr name="mRingNum" format="integer"/>
+        <attr name="mScanSpeed" format="integer"/>
+        <attr name="mScanAngle" format="integer"/>
+        <attr name="mown_sex" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircleProgressBar">
+        <attr name="antiAlias" />
+        <attr name="startAngle" />
+        <attr name="sweepAngle" />
+        <attr name="animTime" />
+        <attr name="maxValue" />
+        <attr name="value" />
+        <attr name="unit" />
+        <attr name="unitSize" />
+        <attr name="unitColor" />
+        <attr name="hint" />
+        <attr name="hintSize" />
+        <attr name="hintColor" />
+        <attr name="precision" />
+        <attr name="valueSize" />
+        <attr name="valueColor" />
+        <attr name="bgArcColor" />
+        <attr name="arcWidth" />
+        <attr name="arcColors" />
+        <attr name="textOffsetPercentInRadius" />
+        <attr name="bgArcWidth" />
+        <attr name="dottedLineCount" />
+        <attr name="lineDistance" />
+        <attr name="dottedLineWidth" />
+        <attr name="foreStartColor" />
+        <attr name="foreEndColor" />
+
+    </declare-styleable>
+
+</resources>

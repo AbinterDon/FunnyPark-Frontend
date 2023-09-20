@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_version">1.0.1</string>
+    <string name="app_team">FunnyPark</string>
+
+    <string name="app_name">Funny Park</string>
+    <string name="submit">Submit</string>
+    <!--<string name="title_activity_funnypark_login">funnypark_login</string>-->
+    <string name="nav_game">活動資訊</string>
+    <string name="nav_store">平台商城</string>
+    <string name="nav_map">主題園區</string>
+    <string name="nav_ticket">票券資訊</string>
+    <string name="nav_account">會員中心</string>
+
+    <!--高跟鞋教堂簡介-->
+    <string name="activity_title_1">嘉義縣政府－高跟鞋教堂逃走中</string>
+    <string name="activity_invite_1">嘉義縣政府</string>
+    <string name="activity_date_1">2018-04-23</string>
+    <string name="activity_time_1">14:00-17:00</string>
+    <string name="activity_where_1">625嘉義縣布袋鎮海興街6號</string>
+    <string name="activity_tag_1_1">嘉義</string>
+    <string name="activity_tag_1_2">大逃殺</string>
+    <string name="activity_tag_1_3">高跟鞋教堂</string>
+    <string name="activity_about_1">高跟鞋教堂高度約17m，寬度約11m，
+        主結構由1,269根鋼架組成，外表共約320餘片玻璃，造型相當亮麗美觀，
+        其設計與裝設不僅是全台第一，更是全世界唯一。高跟鞋教堂幸福意象工程
+        施工相當不易，320餘片玻璃大小、安裝角度皆不同，必須克服高跟鞋的形狀及
+        彎曲幅度，故鋼架及玻璃組裝精度要求極高。玻璃高跟鞋象徵「每個小女孩都曾夢
+        想有雙漂亮的高跟鞋，伴著自己走出美麗優雅的人生。</string>
+
+    <!--高跟鞋教堂2簡介-->
+    <string name="activity_title_2">嘉義縣政府－高跟鞋教堂逃走中2</string>
+    <string name="activity_invite_2">嘉義縣政府</string>
+    <string name="activity_date_2">2018-04-30</string>
+    <string name="activity_time_2">14:00-17:00</string>
+    <string name="activity_where_2">625嘉義縣布袋鎮海興街6號</string>
+    <string name="activity_tag_2_1">嘉義</string>
+    <string name="activity_tag_2_2">大逃殺</string>
+    <string name="activity_tag_2_3">高跟鞋教堂</string>
+    <string name="activity_about_2">高跟鞋教堂高度約17m，寬度約11m，
+        主結構由1,269根鋼架組成，外表共約320餘片玻璃，造型相當亮麗美觀，
+        其設計與裝設不僅是全台第一，更是全世界唯一。高跟鞋教堂幸福意象工程
+        施工相當不易，320餘片玻璃大小、安裝角度皆不同，必須克服高跟鞋的形狀及
+        彎曲幅度，故鋼架及玻璃組裝精度要求極高。玻璃高跟鞋象徵「每個小女孩都曾夢
+        想有雙漂亮的高跟鞋，伴著自己走出美麗優雅的人生。</string>
+
+    <!--基隆廟口簡介-->
+    <string name="activity_title_3">基隆市文化局–嚐美食破任務</string>
+    <string name="activity_invite_3">基隆市文化局</string>
+    <string name="activity_date_3">2018-08-24</string>
+    <string name="activity_time_3">18:00-19:00</string>
+    <string name="activity_where_3">200基隆市仁愛區愛四路20號</string>
+    <string name="activity_tag_3_1">基隆</string>
+    <string name="activity_tag_3_2">嚐美食</string>
+    <string name="activity_tag_3_3">基隆廟口夜市</string>
+    <string name="activity_about_3">位於基隆市仁三路旁的奠濟宮周圍，從愛二路至愛三路之間的仁
+        三路，小吃種類眾多，短短3、400公尺，卻聚集了有近200個攤位，走在其間，嘴巴沒有一
+        刻停閒，這時你會期望自己是個超級大胃王，能將這基隆廟口夜市的所有美食都能一一品嚐。
+
+        夜市中每位經營的老闆都巧心創作口味和料理，用料實在而且價錢公道、色香味俱全；也難怪每天這
+        兒都相當的熱鬧。著名小吃有鼎邊趖、天婦羅、肉羹、蚵仔煎與滷肉飯….等，應有盡有，不論是海鮮還是香
+        烤雞肉、水果冰品，各種小吃口味道地，一路吃下來就像是走遍了整個臺灣，讓人來了還想再來。除了本地人愛來
+        這裡打打牙祭之外，觀光客也相偕而來呢！所以想要一嚐臺灣的特有美食小吃，基隆廟口你可不能錯過喔！</string>
+
+    <!--水晶教堂簡介-->
+    <string name="activity_title_4">台南市政府–水晶教堂躲貓貓</string>
+    <string name="activity_invite_4">台南市政府</string>
+    <string name="activity_date_4">2018-04-28</string>
+    <string name="activity_time_4">12:00-14:00</string>
+    <string name="activity_where_4">727台南市北門區北門里200號</string>
+    <string name="activity_tag_4_1">台南</string>
+    <string name="activity_tag_4_2">躲貓貓</string>
+    <string name="activity_tag_4_3">水晶教堂</string>
+    <string name="activity_about_4">北門遊客中心坐落於台南市北門區，是
+        由北門洗滌鹽工廠改建而成，外觀仍保留工廠傾斜的屋頂造型。中心內部
+        介紹雲嘉南濱海地區的景點，以及鹽業歷史、濕地生態、地方產業與文學藝術
+        等主題區。為推廣北門地區，雲嘉南濱海國家風景區將遊客中心周圍七公頃打造為「婚
+        紗美地」，吸引新婚夫妻到此拍攝婚紗。周邊佈置了各式浪漫彩繪、異國風味的特色小屋，以
+        及象徵愛情的藝術裝置，其中最吸睛的便是2014年全新打造的「白色水晶教堂」。</string>
+
+    <string name="mobile_guide">
+        座落於嘉義布袋海景公園的高跟鞋教堂，因高達17.76公尺，於2016年6月份獲得金氏世界紀錄認證，成為全世界最大的高跟鞋型建築物。\n
+        該座玻璃高跟鞋教堂由藍色玻璃所拼裝而成，主體結構以1269根鋼架和320片玻璃拼組而成，每片玻璃的大小與拼裝角度均不同，總工程費用達2317萬元。因造型醒目，建物一完工後，頓時湧進人潮觀賞，蔚為話題。\n
+        這座教堂由雲嘉南濱海風景管理處負責規劃，之所以會以高跟鞋為主題，主要是因為當地早期盛行烏腳病，一名女子在婚前發病，必須截斷足部，導致無法在結婚時穿上高跟鞋，徒留遺憾。因此，雲嘉南濱海風管處特地在沿海建造一座象徵幸福的高跟鞋教堂，彌補這些因烏腳病而被迫截去雙足女子的遺憾。也因造型醒目，吸引不少觀光客前往，為地方帶進為數可觀的觀光財。
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

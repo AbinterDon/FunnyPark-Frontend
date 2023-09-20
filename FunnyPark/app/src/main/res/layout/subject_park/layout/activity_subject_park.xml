@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".subject_park.subject_park">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--園區導覽大框框-->
+            <LinearLayout
+                android:id="@+id/park_tour"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:background="#423d37"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp">
+                <!--文字框-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <!--園區導覽-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:text="園區導覽"
+                        android:textColor="#fff"
+                        android:textSize="45dp"
+                        android:textStyle="bold" />
+                    <!--行動導覽/園區地圖/園區空拍-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="行動導覽"
+                            android:textColor="#fcc543"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="園區地圖"
+                            android:textColor="#fcc543"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="園區空拍"
+                            android:textColor="#fcc543"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--Icon-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/park_where_map" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--園區折扣大框框-->
+            <LinearLayout
+                android:id="@+id/park_discount"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:background="#151837"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp">
+                <!--文字框-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <!--園區折扣-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="12dp"
+                        android:text="園區折扣"
+                        android:textColor="#fff"
+                        android:textSize="45dp"
+                        android:textStyle="bold" />
+                    <!--行動導覽/園區地圖/園區空拍-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="最新折扣"
+                            android:textColor="#fcc543"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="園區折扣"
+                            android:textColor="#fcc543"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="商家折扣"
+                            android:textColor="#fcc543"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--Icon-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/park_offer" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--園區活動大框框-->
+            <LinearLayout
+                android:id="@+id/park_activities"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:background="#1e1e1e"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp">
+                <!--文字框-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <!--園區活動-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:text="園區活動"
+                        android:textColor="#fff"
+                        android:textSize="45dp"
+                        android:textStyle="bold" />
+                    <!--行動導覽/園區地圖/園區空拍-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="最新活動"
+                            android:textColor="#fcc543"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="推薦活動"
+                            android:textColor="#fcc543"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="街頭表演"
+                            android:textColor="#fcc543"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--Icon-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/park_activity_time" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar4"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="#001F2C"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/logo_title_w"
+            tools:layout_editor_absoluteX="90dp"
+            tools:layout_editor_absoluteY="3dp" />
+        <!--LOGO設定(置中)-->
+        <!--位置訊息靠左(16dp)-->
+        <!--日曆與位置訊息間距(10dp)-->
+        <ImageView
+            android:id="@+id/btn_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:src="@drawable/icons8_alarm"
+            android:layout_marginRight="12dp"
+            tools:layout_editor_absoluteX="346dp"
+            tools:layout_editor_absoluteY="17dp" />
+    </android.support.v7.widget.Toolbar>
+
+    <!--標題欄-->
+
+
+</android.support.constraint.ConstraintLayout>

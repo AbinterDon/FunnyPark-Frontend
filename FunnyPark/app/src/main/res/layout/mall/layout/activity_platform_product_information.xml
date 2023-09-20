@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mall.platform_product_information">
+
+    <!--標題欄-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:background="#001F2C"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--購票頁面宣告-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="商品詳細資訊"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="146dp"
+            tools:layout_editor_absoluteY="17dp" />
+        <!--返回上層-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icons_back"
+            android:layout_marginLeft="16dp"
+            android:onClick="finish_this_page"
+            />
+        <!--通知靠右且差距12dp-->
+        <!--查詢靠右且差距14dp-->
+    </android.support.v7.widget.Toolbar>
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/addtoCart"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <!--活動大框架-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/product_img"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorWhite"
+                android:scaleType="centerCrop" />
+            <!--活動內頁-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/activity_background"
+                android:orientation="vertical">
+                <!--活動標題-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/user_img"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="15dp"
+                        android:background="#2f2f2f" />
+
+                    <TextView
+                        android:id="@+id/product_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="18dp"
+                        android:text="商品名稱"
+                        android:textColor="#002738"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/activity_line_drak" />
+
+                <!--標題下內容-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="22.5dp"
+                    android:layout_marginTop="7.5dp"
+                    android:layout_marginRight="22.5dp"
+                    android:layout_marginBottom="18dp"
+                    android:orientation="vertical">
+
+                    <!--園區名稱-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="園區名稱："
+                        android:textColor="#002738"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/product_park"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="無"
+                        android:textColor="#002738"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <!--商家名稱-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:text="商家名稱："
+                        android:textColor="#002738"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/product_merchant"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="無"
+                        android:textColor="#002738"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+
+                    <!--商品簡介-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:text="商品簡介："
+                        android:textColor="#002738"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/product_brief"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="8dp"
+                        android:background="#f8f8f8"
+                        android:paddingLeft="9dp"
+                        android:paddingTop="8.5dp"
+                        android:paddingRight="9dp"
+                        android:paddingBottom="8.5dp"
+                        android:text="無"
+                        android:textColor="#001119"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--購票按鈕-->
+    <Button
+        android:id="@+id/addtoCart"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#004564"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="加入購物車(300元/50P)"
+        android:textColor="#fff"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" /><!--android:onClick="go_buy_car"-->
+
+</android.support.constraint.ConstraintLayout>
